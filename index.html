@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Batido de Açaí da Deia</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fdf6f9; color: #333; margin: 0; padding: 0; }
+    header { background: purple; color: white; text-align: center; padding: 20px; }
+    .cardapio { max-width: 700px; margin: 20px auto; }
+    .produto { border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 8px; background: #fff; }
+    .produto h3 { margin: 0; color: purple; }
+    label { display: block; margin-top: 8px; }
+    select, input[type="checkbox"] { margin-top: 5px; }
+    button { margin-top: 15px; background: purple; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }
+    button:hover { background: darkmagenta; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Batido de Açaí da Deia</h1>
+    <p>Monte seu pedido e envie direto pelo WhatsApp!</p>
+  </header>
+
+  <section class="cardapio">
+    <!-- Produto 1 -->
+    <div class="produto">
+      <h3>Açaí + Creme Gourmet Maracujá</h3>
+      <label>Tamanho:
+        <select id="tamanho1">
+          <option value="300ml - R$15">300ml - R$15</option>
+          <option value="500ml - R$24">500ml - R$24</option>
+        </select>
+      </label>
+      <label>Fruta:
+        <select id="fruta1">
+          <option value="Banana">Banana</option>
+          <option value="Abacate">Abacate</option>
+          <option value="Sem fruta">Sem fruta</option>
+        </select>
+      </label>
+      <label>Adicionais (R$3 cada):</label>
+      <input type="checkbox" value="Granola" id="granola1"> Granola
+      <input type="checkbox" value="Paçoca" id="pacoca1"> Paçoca
+      <input type="checkbox" value="Frutas extras" id="frutas1"> Frutas extras
+      <input type="checkbox" value="Mel" id="mel1"> Mel
+      <input type="checkbox" value="Castanhas" id="castanhas1"> Castanhas
+      <button onclick="enviarWhatsApp('Açaí + Creme Gourmet Maracujá','tamanho1','fruta1',['granola1','pacoca1','frutas1','mel1','castanhas1'])">Pedir no WhatsApp</button>
+    </div>
+
+    <!-- Produto 2 -->
+    <div class="produto">
+      <h3>Açaí + Creme Gourmet Morango</h3>
+      <label>Tamanho:
+        <select id="tamanho2">
+          <option value="300ml - R$15">300ml - R$15</option>
+          <option value="500ml - R$24">500ml - R$24</option>
+        </select>
+      </label>
+      <label>Fruta:
+        <select id="fruta2">
+          <option value="Banana">Banana</option>
+          <option value="Abacate">Abacate</option>
+          <option value="Sem fruta">Sem fruta</option>
+        </select>
+      </label>
+      <label>Adicionais (R$3 cada):</label>
+      <input type="checkbox" value="Granola" id="granola2"> Granola
+      <input type="checkbox" value="Paçoca" id="pacoca2"> Paçoca
+      <input type="checkbox" value="Frutas extras" id="frutas2"> Frutas extras
+      <input type="checkbox" value="Mel" id="mel2"> Mel
+      <input type="checkbox" value="Castanhas" id="castanhas2"> Castanhas
+      <button onclick="enviarWhatsApp('Açaí + Creme Gourmet Morango','tamanho2','fruta2',['granola2','pacoca2','frutas2','mel2','castanhas2'])">Pedir no WhatsApp</button>
+    </div>
+
+    <!-- Produto 3 -->
+    <div class="produto">
+      <h3>Açaí + Creme Gourmet Ninho</h3>
+      <label>Tamanho:
+        <select id="tamanho3">
+          <option value="300ml - R$15">300ml - R$15</option>
+          <option value="500ml - R$24">500ml - R$24</option>
+        </select>
+      </label>
+      <label>Fruta:
+        <select id="fruta3">
+          <option value="Banana">Banana</option>
+          <option value="Abacate">Abacate</option>
+          <option value="Sem fruta">Sem fruta</option>
+        </select>
+      </label>
+      <label>Adicionais (R$3 cada):</label>
+      <input type="checkbox" value="Granola" id="granola3"> Granola
+      <input type="checkbox" value="Paçoca" id="pacoca3"> Paçoca
+      <input type="checkbox" value="Frutas extras" id="frutas3"> Frutas extras
+      <input type="checkbox" value="Mel" id="mel3"> Mel
+      <input type="checkbox" value="Castanhas" id="castanhas3"> Castanhas
+      <button onclick="enviarWhatsApp('Açaí + Creme Gourmet Ninho','tamanho3','fruta3',['granola3','pacoca3','frutas3','mel3','castanhas3'])">Pedir no WhatsApp</button>
+    </div>
+
+    <!-- Produto 4 -->
+    <div class="produto">
+      <h3>Açaí + Leite Condensado + Leite em Pó</h3>
+      <label>Tamanho:
+        <select id="tamanho4">
+          <option value="300ml - R$15">300ml - R$15</option>
+          <option value="500ml - R$24">500ml - R$24</option>
+        </select>
+      </label>
+      <label>Fruta:
+        <select id="fruta4">
+          <option value="Banana">Banana</option>
+          <option value="Abacate">Abacate</option>
+          <option value="Sem fruta">Sem fruta</option>
+        </select>
+      </label>
+      <label>Adicionais (R$3 cada):</label>
+      <input type="checkbox" value="Granola" id="granola4"> Granola
+      <input type="checkbox" value="Paçoca" id="pacoca4"> Paçoca
+      <input type="checkbox" value="Frutas extras" id="frutas4"> Frutas extras
+      <input type="checkbox" value="Mel" id="mel4"> Mel
+      <input type="checkbox" value="Castanhas" id="castanhas4"> Castanhas
+      <button onclick="enviarWhatsApp('Açaí + Leite Condensado + Leite em Pó','tamanho4','fruta4',['granola4','pacoca4','frutas4','mel4','castanhas4'])">Pedir no WhatsApp</button>
+    </div>
+  </section>
+
+  <script>
+    function enviarWhatsApp(produto, tamanhoId, frutaId, adicionaisIds) {
+      let numero = "558588208475"; // número da loja com DDI + DDD
+      let tamanho = document.getElementById(tamanhoId).value;
+      let fruta = document.getElementById(frutaId).value;
+      let adicionais = adicionaisIds
+        .map(id => document.getElementById(id).checked ? document.getElementById(id).value : "")
+        .filter(v => v !== "").join(", ");
+
+      let mensagem = `🍧 *Batido de Açaí da Deia* 🍧
+      
+📦 *Novo pedido recebido!*
+🥤 Produto: ${produto}
+📏 Tamanho: ${tamanho}
+🍓 Fruta: ${fruta}
+✨ Adicionais: ${adicionais || "Nenhum"}
+
+👤 Nome: [Digite aqui]
+💳 Forma de pagamento: [Pix / Cartão / Dinheiro]
+🚚 Entrega (+R$3) ou Retirada: [Escolha]`;
+
+      let url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
